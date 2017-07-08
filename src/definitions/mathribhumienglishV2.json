@@ -1,0 +1,5 @@
+{"key": "days", "value": "4"}
+{"key": "s3bucket.read", "value": "mathribhumi.english.pagehittable"}
+{"key": "historyCompute", "value": "%s.UserHistory"} 
+{"key": "taste","value": "datomata.%s.similararticles"}
+{"key": "recommendation.write", "value":"%s.UserHistoryRecommendations"}

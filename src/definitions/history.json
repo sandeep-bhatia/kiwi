@@ -1,0 +1,7 @@
+{"key": "days", "value": "3"}
+{"key": "s3bucket.read", "value": "datomata.pagehit.punjabkesari"}
+{"key": "historyCompute", "value": "%s.UserHistory"} 
+{"key": "taste","value": "datomata.%s.similararticles"}
+{"key": "recommendation.write", "value":"%s.UserHistoryRecommendations"}
+{"key": "merge", "value":""}
+{"key": "recommendation.writeFinal", "value":"%s.UserRecommendations"}

@@ -1,0 +1,5 @@
+{"key": "days", "value": "4"}
+{"key": "s3bucket.read", "value": "hindubusiness.clickstream"}
+{"key": "historyCompute", "value": "%s.UserHistory"} 
+{"key": "taste","value": "datomata.hindubusiness.similararticles"}
+{"key": "recommendation.write", "value":"%s.UserHistoryRecommendations"}

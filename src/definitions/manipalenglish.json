@@ -1,0 +1,5 @@
+{"key": "days", "value": "3"}
+{"key": "s3bucket.read", "value": "manipalenglish.clickstream"}
+{"key": "historyCompute", "value": "%s.UserHistory"} 
+{"key": "taste","value": "datomata.manipalenglish.similararticles"}
+{"key": "recommendation.write", "value":"%s.UserHistoryRecommendations"}

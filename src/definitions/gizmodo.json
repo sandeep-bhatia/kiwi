@@ -1,0 +1,5 @@
+{"key": "days", "value": "4"}
+{"key": "s3bucket.read", "value": "gizmodo.clickstream"}
+{"key": "historyCompute", "value": "%s.UserHistory"} 
+{"key": "taste","value": "datomata.gizmodo.similararticles"}
+{"key": "recommendation.write", "value":"%s.UserHistoryRecommendations"}

@@ -1,0 +1,5 @@
+{"key": "days", "value": "14"}
+{"key": "s3bucket.read", "value": "datomata.pagehit.punjabkesari"}
+{"key": "user", "value": "1.0"} 
+{"key": "recommendation.write", "value":"%s.CollaborativeRecommendations"}
+{"key": "s3bucket.write", "value": "datomata.users.punjabkesari.emr"}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TouchCarousel Demo</title> 	
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+ 	<meta name="viewport" content="maximum-scale=1,user-scalable=yes,width=1024" >
+ 	
+ 	
+ 	
+ 	
+ 	
+	<!-- Base stylesheet -->
+	<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/touchcarousel.css" />
+   
+	<!-- Skin stylesheets, include to your site only that what you need -->
+	<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/minimal-light-skin/minimal-light-skin.css" />	
+	<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/three-d-skin/three-d-skin.css" />
+	<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/black-and-white-skin/black-and-white-skin.css" />
+	<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/grey-blue-skin/grey-blue-skin.css" />
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	
+	<script src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/jquery.touchcarousel-1.2.min.js"></script> 
+	
+</head>
+<body>
+<div id="main-body">	
+
+	<!-- add the following div in the location where you want the widget to be shown -->
+	<!-- datomata slider begins -->
+	<div id="carousel-image-and-text" class="touchcarousel grey-blue">  
+		<div class="thumb-block">
+			<div class="datomata">
+				<h3><font style="display: inline;font-family:consolas;font-size:75%;">related content</font></h3>
+				<a class="link" style="display: inline;font-family:consolas;font-size:75%;" target='_blank' href="http://datomata.com"><span>Powered by Datomata&#174;</span></a>
+			</div>
+		</div>		
+		<table id="recoTable">
+		</table>
+	</div>
+	<!-- datomata slider ends -->
+</div>
+    <!-- make sure the jquery is included in your page -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>	
+	
+	<!-- include datomata API scripts that will be used for widget rendering -->
+	<script src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/touchcarousel/jquery.touchcarousel-1.2.min.js"></script> 
+	<script src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/datomata.integration.js"></script> 
+
+
+	<!-- add the following snippet to render the widget, in case of similiar articles on article page you need to pass the article Id parameter in all other cases article Id 
+	is optional -->
+	<script>
+	$( document ).ready(function() {
+	  //3 possibilities the way integration can be done
+	  //1. Similiar articles to a given article 
+
+	  /* 
+	  //Case when showing widget as similiar articles widget for a given article 
+	  DatomataApi.ArticleId = "426743"
+      DatomataApi.TenantId = "YTVoBk3L8wiUZkYxLK78",
+      DatomataApi.Context =  "similar",
+      DatomataApi.renderWidget();
+      */
+
+	  //2. User recommendations just based on user history
+	  
+	  //Case when showing recommendations to the user just based on user history his past views
+      DatomataApi.TenantId = "YTVoBk3L8wiUZkYxLK78",
+      DatomataApi.Context =  "interest",
+      DatomataApi.renderWidget();
+      
+
+      //3. Standard recommendations widget (shown on main page etc.)
+	  /* 
+	  //Case when showing recommendations to the user just based on what others are seeing
+      DatomataApi.TenantId = "YTVoBk3L8wiUZkYxLK78",
+      DatomataApi.Context =  "recommended",
+      DatomataApi.renderWidget();
+      */
+
+
+	});
+	</script>
+
+</body>
+</html>

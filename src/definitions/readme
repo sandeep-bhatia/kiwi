@@ -1,0 +1,109 @@
+aws s3 cp sort.json s3://datomata.kiwi.tenants/PunjabKesari/Sort.json
+
+
+00 2,4,6,8,10,12,16,20 * * * /home/ec2-user/EMR/History.sh
+00 7,14 * * * /home/ec2-user/EMR/Merger.sh
+~
+
+1:00 a utc
+6:00 a utc
+11:00 a utc
+16:00  utc
+
+12:00 utc
+
+History 
+
+2
+4
+6
+8
+10
+12
+16
+20
+
+
+/home/ec2-user/scripts/History.sh
+
+
+User User 
+
+4
+14
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 263 bytes
+
+
+while [ true ];
+00 2,4,6,8,10,12,16,20 * * * /home/ec2-user/scripts/History.sh
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 263 bytes
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 192 bytes
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 6 is 261 bytes
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 8 is 250 bytes
+15/12/20 23:40:34 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 7 is 259 bytes
+15/12/20 23:40:34 INFO DAGScheduler: Got job 15 (foreach at Recommendation.scala:45) with 8 output partitions
+15/12/20 23:40:34 INFO DAGScheduler: Final stage: ResultStage 46(foreach at Recommendation.scala:45)
+15/12/20 23:40:34 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 45)
+15/12/20 23:40:34 INFO DAGScheduler: Missing parents: List()
+15/12/20 23:40:34 INFO DAGScheduler: Submitting ResultStage 46 (MapPartitionsRDD[51] at map at sortTransform.scala:79), which has no missing parents
+15/12/20 23:40:34 INFO MemoryStore: ensureFreeSpace(2768) called with curMem=1244677, maxMem=560993402
+15/12/20 23:40:34 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 2.7 KB, free 533.8 MB)
+15/12/20 23:40:34 INFO MemoryStore: ensureFreeSpace(1664) called with curMem=1247445, maxMem=560993402
+15/12/20 23:40:34 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 1664.0 B, free 533.8 MB)
+00 2,4,6,8,10,12,16,20 * * * /home/ec2-user/scripts/History.sh
+00 4,14 * * * /home/ec2-user/scripts/Merger.sh
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"/tmp/crontab.3reCJe" 2L, 110C written

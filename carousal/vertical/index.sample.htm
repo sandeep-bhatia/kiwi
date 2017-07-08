@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- style sheet needed to be integrated for datomata widget -->
+<link rel="stylesheet" href="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/css/style.css" />
+</head>
+<body>
+	<!-- the vertical widget html starts -->
+	<div class="thumb-block">
+		<div class="datomata">
+			<h3><font style="display: inline;font-family:consolas;font-size:85%;">related content</font></h3>
+			<a class="link" style="display: inline;font-family:consolas;font-size:75%;" href="http://datomata.com"><span>Powered by Datomata&#174;</span></a>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, -1436px) translateZ(0px);" id="scroller">
+		<div class="clear"></div>
+		<ul class="slides slides2">
+		</ul>
+	</div>
+	</div>
+	<!-- the vertical widget html ends -->
+<script type="text/javascript" src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/js/iscroll.js"></script>
+<script src="http://datomata.carousal.s3-website-us-west-2.amazonaws.com/js/datomata.integration.vertical.js"></script> 
+<script>
+$( document ).ready(function() {
+  DatomataApi.TenantId = "YTVoBk3L8wiUZkYxLK78",
+  DatomataApi.Context =  "interest",
+  DatomataApi.renderWidget();
+});
+</script>        
+</body>
+</html>

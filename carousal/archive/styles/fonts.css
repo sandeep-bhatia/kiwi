@@ -1,0 +1,111 @@
+@font-face {
+	font-family:'KozGoPro-Bold-AlphaNum';
+	src: url(../fonts/KozGoPro-Bold-AlphaNum_gdi.eot);
+	src: url(../fonts/KozGoPro-Bold-AlphaNum_gdi.eot) format('embedded-opentype'),
+		url(../fonts/KozGoPro-Bold-AlphaNum_gdi.woff) format('woff'),
+		url(../fonts/KozGoPro-Bold-AlphaNum_gdi.ttf) format('truetype'),
+		url(../fonts/KozGoPro-Bold-AlphaNum_gdi.otf) format('opentype'),
+		url(../fonts/KozGoPro-Bold-AlphaNum_gdi.svg#KozGoPro-Bold-AlphaNum) format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
+}
+
+
+@font-face {
+	font-family:'KozGoPro-ExtraLight-AlphaNum';
+	src: url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.eot);
+	src: url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.eot) format('embedded-opentype'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.woff) format('woff'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.ttf) format('truetype'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.otf) format('opentype'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum_gdi.svg#KozGoPro-ExtraLight-AlphaNum) format('svg');
+	font-weight: 200;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
+}
+
+
+@font-face {
+	font-family:'KozGoPro-Heavy-AlphaNum';
+	src: url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.eot);
+	src: url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.eot) format('embedded-opentype'),
+		url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.woff) format('woff'),
+		url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.ttf) format('truetype'),
+		url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.otf) format('opentype'),
+		url(../fonts/KozGoPro-Heavy-AlphaNum_gdi.svg) format('svg');
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
+}
+
+
+@font-face {
+	font-family:'Aharoni-Bold';
+	src: url(../fonts/Aharoni-Bold_gdi.eot);
+	src: url(../fonts/Aharoni-Bold_gdi.eot) format('embedded-opentype'),
+		url(../fonts/Aharoni-Bold_gdi.woff) format('woff'),
+		url(../fonts/Aharoni-Bold_gdi.ttf) format('truetype'),
+		url(../fonts/Aharoni-Bold_gdi.otf) format('opentype'),
+		url(../fonts/Aharoni-Bold_gdi.svg) format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2122;
+}
+
+@font-face {
+	font-family:'KozGoPro-Medium-AlphaNum';
+	src: url(../fonts/KozGoPro-Medium-AlphaNum_gdi.eot);
+	src: url(../fonts/KozGoPro-Medium-AlphaNum_gdi.eot) format('embedded-opentype'),
+		url(../fonts/KozGoPro-Medium-AlphaNum_gdi.woff) format('woff'),
+		url(../fonts/KozGoPro-Medium-AlphaNum_gdi.ttf) format('truetype'),
+		url(../fonts/KozGoPro-Medium-AlphaNum_gdi.svg) format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+	font-family:'MyriadPro-Regular';
+	src: url(../fonts/MyriadPro-Regular_gdi.eot);
+	src: url(../fonts/MyriadPro-Regular_gdi.eot) format('embedded-opentype'),
+		url(../fonts/MyriadPro-Regular_gdi.woff) format('woff'),
+		url(../fonts/MyriadPro-Regular_gdi.ttf) format('truetype'),
+		url(../fonts/MyriadPro-Regular_gdi.svg) format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+
+@font-face {
+	font-family:'MyriadPro-Semibold';
+	src: url(../fonts/MyriadPro-Semibold_gdi.eot);
+	src: url(../fonts/MyriadPro-Semibold_gdi.eot) format('embedded-opentype'),
+		url(../fonts/MyriadPro-Semibold_gdi.woff) format('woff'),
+		url(../fonts/MyriadPro-Semibold_gdi.ttf) format('truetype'),
+		url(../fonts/MyriadPro-Semibold_gdi.otf) format('opentype'),
+		url(../fonts/MyriadPro-Semibold_gdi.svg) format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+  font-family: 'KozGoPro-ExtraLight-AlphaNum';
+  src: url(../fonts/KozGoPro-ExtraLight-AlphaNum.eot) format('embedded-opentype');
+  		url(../fonts/KozGoPro-ExtraLight-AlphaNum.woff) format('woff'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum.ttf) format('truetype'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum.otf) format('opentype'),
+		url(../fonts/KozGoPro-ExtraLight-AlphaNum.svg) format('svg');
+  
+  font-weight: normal;
+  font-style: normal;
+}

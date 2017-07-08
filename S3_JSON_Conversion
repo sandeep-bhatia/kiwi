@@ -1,0 +1,100 @@
+var AWS = require('aws-sdk');
+var path = require('path');
+
+AWS.config.region = 'us-west-2';
+AWS.config.update({accessKeyId: 'AKIAJIQS5GRC32IWX3AA', secretAccessKey: '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'});
+
+var creds = new AWS.Credentials('AKIAJIQS5GRC32IWX3AA', 'DgZV2drgqFbSXLlAoX9Cv9GsoxwC09IddFQXWJ1k');
+var esDomain = {
+    endpoint: 'search-datomata123-ji3fhftvm2xn7bdxmkrttxihua.us-west-2.es.amazonaws.com',
+    region: 'us-west-2',
+    index: 'punjabkesaristreams',
+    doctype: 'click'
+};
+var totLogLines = 0;    // Total number of log lines in the file
+var numDocsAdded = 0; 
+var endpoint =  new AWS.Endpoint(esDomain.endpoint);
+var s3 = new AWS.S3();
+
+
+var recordKeys = ["visitedDate","articleId","userId","device","city","state","country","addedOn","category","deviceType","reserved","tenantId"];
+function s3LogsToES(bucket, key, context) {
+    //console.log('about to send data to ES');
+    var s3Stream = s3.getObject({Bucket: bucket, Key: key}, function (err, data) {
+        //console.log('error in bucket ' + err);
+        //console.log('data retrieved from bucket ' + data.Body);
+        var lines = data.Body.toString().split("\n");
+        var lineStr = "{\"clicks\": [";
+        for(var index = 0; index < lines.length; index++) {
+            var entries = lines[index].split(",");
+           
+            if(entries && entries.length > 0) {
+            	var postedString = "{";
+            	for(var entryIndex = 0; entryIndex < entries.length - 1; entryIndex++) {
+            		postedString = postedString + "\"" + recordKeys[entryIndex] + "\":\"" + entries[entryIndex] + "\",";
+            	}
+            	postedString = postedString + "\"" + recordKeys[entryIndex] + "\":\"" + entries[entryIndex] + "\"}";
+            	lineStr = lineStr + postedString + ',';
+            }
+        }
+        lineStr = lineStr + '{}]}';
+        postDocumentToS3(lineStr, key, context);
+        //postDocumentToES(lineStr, key, context);
+    });
+}
+
+function postDocumentToS3(doc, key, context) {
+    console.log('uploading ' + doc + 'to destination bucket');
+    var s3 = new AWS.S3({params: {Bucket: 'datomata.sandeep.clickstream', Key: key}});
+    s3.upload({Body: doc}, function() {
+      console.log("Successfully uploaded data to destination");
+    });
+}
+
+/*
+ * Add the given document to the ES domain.
+ * If all records are successfully added, indicate success to lambda
+ * (using the "context" parameter).
+ */
+function postDocumentToES(doc, context) {
+    var req = new AWS.HttpRequest(endpoint);
+    req.method = 'POST';
+    req.path = path.join('/', esDomain.index, esDomain.doctype);
+    req.region = esDomain.region;
+    req.body = doc;
+    req.headers['presigned-expires'] = false;
+    req.headers['Host'] = endpoint.host;
+    // Sign the request (Sigv4)
+    var signer = new AWS.Signers.V4(req, 'es');
+    signer.addAuthorization(creds, new Date());
+
+    // Post document to ES
+    var send = new AWS.NodeHttpClient();
+    send.handleRequest(req, null, function(httpResp) {
+        var body = '';
+        httpResp.on('data', function (chunk) {
+            body += chunk;
+        });
+        httpResp.on('end', function (chunk) {
+                console.log('end called');
+                context.succeed();
+        });
+        httpResp.on('error', function (chunk) {
+                console.log('error - ' + chunk);
+                context.fail();
+        });
+    }, function(err) {
+        console.log('Error: ' + err);
+        context.fail();
+    });
+}
+
+exports.handler = (event, context, callback) => {
+    console.log('Lambda invoked for Hindu click stream');
+     event.Records.forEach(function(record) {
+        var bucket = record.s3.bucket.name;
+        var objKey = decodeURIComponent(record.s3.object.key.replace(/\+/g, ' '));
+        s3LogsToES(bucket, objKey, context);
+        
+    });
+};
